@@ -5,7 +5,7 @@ const Pairs = (props) => {
         <div className="on">
           <button
             onClick={() => {
-              props.setFirst(true);
+              props.set(true);
             }}
           >
             ON
@@ -15,7 +15,7 @@ const Pairs = (props) => {
         <div className="off">
           <button
             onClick={() => {
-              props.setFirst(false);
+              props.set(false);
             }}
           >
             OFF

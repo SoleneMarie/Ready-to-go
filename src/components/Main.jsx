@@ -5,9 +5,9 @@ const Main = (props) => {
     <>
       <main>
         <section className="allButtons">
-          <Pairs stateFirst={props.stateFirst} setFirst={props.setFirst} />
-          <Pairs stateSec={props.stateSec} setSec={props.setSec} />
-          <Pairs stateThird={props.stateThird} setThird={props.setThird} />
+          <Pairs state={props.stateFirst} set={props.setFirst} />
+          <Pairs state={props.stateSec} set={props.setSec} />
+          <Pairs state={props.stateThird} set={props.setThird} />
 
           <section className="final">
             {props.stateFirst === true &&
