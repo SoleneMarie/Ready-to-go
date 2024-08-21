@@ -1,98 +1,26 @@
 import { useState } from "react";
 import "./App.css";
+import Header from "./components/Header";
+import Main from "./components/Main";
+import Footer from "./components/Footer";
 
 function App() {
-  const [isOffFirst, setIsOffFirst] = useState(false);
-  const [isOffSec, setIsOffSec] = useState(false);
-  const [isOffThird, setIsOffThird] = useState(false);
-  const [isPossible, setIsPossible] = useState(false);
+  const [isOnFirst, setIsOnFirst] = useState(false);
+  const [isOnSec, setIsOnSec] = useState(false);
+  const [isOnThird, setIsOnThird] = useState(false);
   return (
     <>
-      <header>
-        <img src="" />
-        <h1>Ready To Go</h1>
-      </header>
+      <Header src="" title="Ready To Go" />
 
-      <main>
-        <section className="allButtons">
-          <section className="pair">
-            <div className="on">
-              <button
-                onClick={() => {
-                  setIsOffFirst(true);
-                }}
-              >
-                ON
-              </button>
-            </div>
-
-            <div className="off">
-              <button
-                onClick={() => {
-                  setIsOffFirst(false);
-                }}
-              >
-                OFF
-              </button>
-            </div>
-          </section>
-          <section className="pair">
-            <div className="on">
-              <button
-                onClick={() => {
-                  setIsOffSec(true);
-                }}
-              >
-                ON
-              </button>
-            </div>
-
-            <div className="off">
-              <button
-                onClick={() => {
-                  setIsOffSec(false);
-                }}
-              >
-                OFF
-              </button>
-            </div>
-          </section>
-          <section className="pair">
-            <div className="on">
-              <button
-                onClick={() => {
-                  setIsOffThird(true);
-                }}
-              >
-                ON
-              </button>
-            </div>
-
-            <div className="off">
-              <button
-                onClick={() => {
-                  setIsOffThird(false);
-                }}
-              >
-                OFF
-              </button>
-            </div>
-          </section>
-        </section>
-
-        <section className="final">
-          {setIsOffFirst === true &&
-          setIsOffSec === true &&
-          setIsOffThird === true ? (
-            <button className="green">Go !</button>
-          ) : (
-            <button className="red">No Way !</button>
-          )}
-        </section>
-      </main>
-      <footer>
-        <p>Made with React by Solene</p>
-      </footer>
+      <Main
+        stateFirst={isOnFirst}
+        setFirst={setIsOnFirst}
+        stateSec={isOnSec}
+        setSec={setIsOnSec}
+        stateThird={isOnThird}
+        setThird={setIsOnThird}
+      />
+      <Footer with="React" by="Solène" />
     </>
   );
 }
