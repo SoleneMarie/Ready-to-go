@@ -1,4 +1,5 @@
 import Pairs from "./Pairs";
+import Final from "./Final";
 
 const Main = (props) => {
   return (
@@ -8,16 +9,11 @@ const Main = (props) => {
           <Pairs state={props.stateFirst} set={props.setFirst} />
           <Pairs state={props.stateSec} set={props.setSec} />
           <Pairs state={props.stateThird} set={props.setThird} />
-
-          <section className="final">
-            {props.stateFirst === true &&
-            props.stateSec === true &&
-            props.stateThird === true ? (
-              <button className="green">Go !</button>
-            ) : (
-              <button className="red">No Way !</button>
-            )}
-          </section>
+          <Final
+            stateFirst={props.stateFirst}
+            stateSec={props.stateSec}
+            stateThird={props.stateThird}
+          />
         </section>
       </main>
     </>

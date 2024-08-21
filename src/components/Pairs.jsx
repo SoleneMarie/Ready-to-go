@@ -1,26 +1,22 @@
+import Button from "./Button";
 const Pairs = (props) => {
   return (
     <>
       <section className="pair">
-        <div className="on">
-          <button
-            onClick={() => {
-              props.set(true);
-            }}
-          >
-            ON
-          </button>
-        </div>
-
-        <div className="off">
-          <button
-            onClick={() => {
-              props.set(false);
-            }}
-          >
-            OFF
-          </button>
-        </div>
+        <Button
+          name="on"
+          value="true"
+          set={props.set}
+          state={props.state}
+          texte="ON"
+        />
+        <Button
+          name="of"
+          value="false"
+          set={props.set}
+          state={props.state}
+          texte="OFF"
+        />
       </section>
     </>
   );
